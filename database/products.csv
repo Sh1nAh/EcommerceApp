@@ -1,0 +1,109 @@
+id,category_id,image,name,slug,subtext,price,description,color,chipicon,chiptext,cameraicon,cameratext,batteryicon,batterytext,created_at,updated_at
+1,1,/images/15pro/iphone15pro-blacktitanium.jpg,iPhone 15 Pro,iphone-15pro-black_titanium,The ultimate iPhone.,999,"6.7"" or 6.1""
+Super Retina XDR display
+ProMotion technology
+Always-on display
+Titanium with textured matte glass back Action button",Black Titanium,/images/15pro/iphone15pro-icon1.jpg,A17 Pro chip with 6-core GPU,/images/15pro/iphone15pro-icon2.jpg,"Pro camera system 
+48MP Main | Ultra Wide | Telephoto
+Super-high-resolution photos (24MP and 48MP)
+Next-generation portraits with Focus and Depth Control",/images/15pro/iphone15pro-icon3.jpg,Up to 29 hours video playback,,
+2,1,/images/15pro/iphone15pro-bluetitanium.jpg,iPhone 15 Pro,iphone-15pro-blue_titanium,The ultimate iPhone.,999,"6.7"" or 6.1""
+Super Retina XDR display
+ProMotion technology
+Always-on display
+Titanium with textured matte glass back Action button",Blue Titanium,/images/15pro/iphone15pro-icon1.jpg,A17 Pro chip with 6-core GPU,/images/15pro/iphone15pro-icon2.jpg,"Pro camera system 
+48MP Main | Ultra Wide | Telephoto
+Super-high-resolution photos (24MP and 48MP)
+Next-generation portraits with Focus and Depth Control",/images/15pro/iphone15pro-icon3.jpg,Up to 29 hours video playback,,
+3,1,/images/15pro/iphone15pro-naturaltitanium.jpg,iPhone 15 Pro,iphone-15pro-natural_titanium,The ultimate iPhone.,999,"6.7"" or 6.1""
+Super Retina XDR display
+ProMotion technology
+Always-on display
+Titanium with textured matte glass back Action button",Natural Titanium,/images/15pro/iphone15pro-icon1.jpg,A17 Pro chip with 6-core GPU,/images/15pro/iphone15pro-icon2.jpg,"Pro camera system 
+48MP Main | Ultra Wide | Telephoto
+Super-high-resolution photos (24MP and 48MP)
+Next-generation portraits with Focus and Depth Control",/images/15pro/iphone15pro-icon3.jpg,Up to 29 hours video playback,,
+4,1,/images/15pro/iphone15pro-whitetitanium.jpg,iPhone 15 Pro,iphone-15pro-white_titanium,The ultimate iPhone.,999,"6.7"" or 6.1""
+Super Retina XDR display
+ProMotion technology
+Always-on display
+Titanium with textured matte glass back Action button",White Titanium,/images/15pro/iphone15pro-icon1.jpg,A17 Pro chip with 6-core GPU,/images/15pro/iphone15pro-icon2.jpg,"Pro camera system 
+48MP Main | Ultra Wide | Telephoto
+Super-high-resolution photos (24MP and 48MP)
+Next-generation portraits with Focus and Depth Control",/images/15pro/iphone15pro-icon3.jpg,Up to 29 hours video playback,,
+5,1,/images/15/iphone15-black.jpg,iPhone 15,iphone-15-black,A total powerhouse.,799,"6.7"" or 6.1""
+Super Retina XDR display
+Aluminum with color-infused glass back
+Ring/Silent switch",Black,/images/15/iphone15-icon1.jpg,A16 Bionic chip with 5-core GPU,/images/15/iphone15-icon2.jpg,"Advanced dual-camera system
+48MP Main | Ultra Wide
+Super-high-resolution photos (24MP and 48MP)
+Next-generation portraits with Focus and Depth Control",/images/15/iphone15-icon3.jpg,Up to 26 hours video playback,,
+6,1,/images/15/iphone15-blue.jpg,iPhone 15,iphone-15-blue,A total powerhouse.,799,"6.7"" or 6.1""
+Super Retina XDR display
+Aluminum with color-infused glass back
+Ring/Silent switch",Blue,/images/15/iphone15-icon1.jpg,A16 Bionic chip with 5-core GPU,/images/15/iphone15-icon2.jpg,"Advanced dual-camera system
+48MP Main | Ultra Wide
+Super-high-resolution photos (24MP and 48MP)
+Next-generation portraits with Focus and Depth Control",/images/15/iphone15-icon3.jpg,Up to 26 hours video playback,,
+7,1,/images/15/iphone15-green.jpg,iPhone 15,iphone-15-green,A total powerhouse.,799,"6.7"" or 6.1""
+Super Retina XDR display
+Aluminum with color-infused glass back
+Ring/Silent switch",Green,/images/15/iphone15-icon1.jpg,A16 Bionic chip with 5-core GPU,/images/15/iphone15-icon2.jpg,"Advanced dual-camera system
+48MP Main | Ultra Wide
+Super-high-resolution photos (24MP and 48MP)
+Next-generation portraits with Focus and Depth Control",/images/15/iphone15-icon3.jpg,Up to 26 hours video playback,,
+8,1,/images/15/iphone15-pink.jpg,iPhone 15,iphone-15-pink,A total powerhouse.,799,"6.7"" or 6.1""
+Super Retina XDR display
+Aluminum with color-infused glass back
+Ring/Silent switch",Pink,/images/15/iphone15-icon1.jpg,A16 Bionic chip with 5-core GPU,/images/15/iphone15-icon2.jpg,"Advanced dual-camera system
+48MP Main | Ultra Wide
+Super-high-resolution photos (24MP and 48MP)
+Next-generation portraits with Focus and Depth Control",/images/15/iphone15-icon3.jpg,Up to 26 hours video playback,,
+9,1,/images/15/iphone15-yellow.jpg,iPhone 15,iphone-15-yellow,A total powerhouse.,799,"6.7"" or 6.1""
+Super Retina XDR display
+Aluminum with color-infused glass back
+Ring/Silent switch",Yellow,/images/15/iphone15-icon1.jpg,A16 Bionic chip with 5-core GPU,/images/15/iphone15-icon2.jpg,"Advanced dual-camera system
+48MP Main | Ultra Wide
+Super-high-resolution photos (24MP and 48MP)
+Next-generation portraits with Focus and Depth Control",/images/15/iphone15-icon3.jpg,Up to 26 hours video playback,,
+10,1,/images/14/iphone14-blue.jpg,iPhone 14,iphone-14-blue,As amazing as ever.,699,"6.7"" or 6.1""
+Super Retina XDR display
+Aluminum with glass back
+Ring/Silent switch",Blue,/images/14/iphone14-icon1.jpg,A15 Bionic chip with 5-core GPU,/images/14/iphone14-icon2.jpg,"Dual-camera system
+12MP Main | Ultra Wide
+Portrait mode with Focus and Depth Control",/images/14/iphone14-icon3.jpg,Up to 26 hours video playback,,
+11,1,/images/14/iphone14-midnight.jpg,iPhone 14,iphone-14-midnight,As amazing as ever.,699,"6.7"" or 6.1""
+Super Retina XDR display
+Aluminum with glass back
+Ring/Silent switch",Midnight,/images/14/iphone14-icon1.jpg,A15 Bionic chip with 5-core GPU,/images/14/iphone14-icon2.jpg,"Dual-camera system
+12MP Main | Ultra Wide
+Portrait mode with Focus and Depth Control",/images/14/iphone14-icon3.jpg,Up to 26 hours video playback,,
+12,1,/images/14/iphone14-purple.jpg,iPhone 14,iphone-14-purple,As amazing as ever.,699,"6.7"" or 6.1""
+Super Retina XDR display
+Aluminum with glass back
+Ring/Silent switch",Purple,/images/14/iphone14-icon1.jpg,A15 Bionic chip with 5-core GPU,/images/14/iphone14-icon2.jpg,"Dual-camera system
+12MP Main | Ultra Wide
+Portrait mode with Focus and Depth Control",/images/14/iphone14-icon3.jpg,Up to 26 hours video playback,,
+13,1,/images/14/iphone14-red.jpg,iPhone 14,iphone-14-red,As amazing as ever.,699,"6.7"" or 6.1""
+Super Retina XDR display
+Aluminum with glass back
+Ring/Silent switch",Red,/images/14/iphone14-icon1.jpg,A15 Bionic chip with 5-core GPU,/images/14/iphone14-icon2.jpg,"Dual-camera system
+12MP Main | Ultra Wide
+Portrait mode with Focus and Depth Control",/images/14/iphone14-icon3.jpg,Up to 26 hours video playback,,
+14,1,/images/14/iphone14-starlight.jpg,iPhone 14,"iphone-14-s
+tarlight",As amazing as ever.,699,"6.7"" or 6.1""
+Super Retina XDR display
+Aluminum with glass back
+Ring/Silent switch",Starlight,/images/14/iphone14-icon1.jpg,A15 Bionic chip with 5-core GPU,/images/14/iphone14-icon2.jpg,"Dual-camera system
+12MP Main | Ultra Wide
+Portrait mode with Focus and Depth Control",/images/14/iphone14-icon3.jpg,Up to 26 hours video playback,,
+15,1,/images/14/iphone14-yellow.jpg,iPhone 14,iphone-14-yellow,As amazing as ever.,699,"6.7"" or 6.1""
+Super Retina XDR display
+Aluminum with glass back
+Ring/Silent switch",Yellow,/images/14/iphone14-icon1.jpg,A15 Bionic chip with 5-core GPU,/images/14/iphone14-icon2.jpg,"Dual-camera system
+12MP Main | Ultra Wide
+Portrait mode with Focus and Depth Control",/images/14/iphone14-icon3.jpg,Up to 26 hours video playback,,
+16,5,/images/airpods/airpods-2nd-gen.png,Airpods 2nd gen,airpods-2nd-gen,,999,,,/images/airpods/airpods-2nd-gen-icon1.png,,/images/airpods/airpods-2nd-gen-icon2.png,,/images/airpods/airpods-2nd-gen-icon3.png,Up to 26 hours video playback,,
+17,4,/images/mac/macbook-air.png,MacBook Air,macbook-air,,,,,,,,,,,,
+18,3,/images/applewatch/apple-watch-series-9.png,Apple watch series 9,apple-watch-series-9,,,,,,,,,,,,
+19,2,/images/ipad/ipad-pro.png,iPad Pro,ipad-pro,,,,,,,,,,,,
