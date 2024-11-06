@@ -4,6 +4,26 @@
     .orderlist
     {
         overflow-x: auto;
+        scrollbar-color: #333 #fff;
+    }
+    .orderlist:hover
+    {
+        scrollbar-color: #666 #fff;
+    }
+    .orderlist::-webkit-scrollbar {
+        padding: 0 3rem;
+    }
+    .orderlist::-webkit-scrollbar-track {
+        background: #fff;
+    }
+
+    .orderlist::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: .5rem;
+    }
+
+    .orderlist::-webkit-scrollbar-thumb:hover {
+        background: #666;
     }
     tr, th, td
     {
@@ -33,7 +53,7 @@
     }
     .product-create
     {
-        margin-right: 3.2rem;
+        margin-right: .2rem;
         padding: .5rem 2rem; 
         line-height: 1.5;
         font-size: 1.4rem; 
@@ -77,7 +97,8 @@
         font-weight: bold;
         font-size: 1.3rem;
         transition: .5s;
-        color: #666;
+        color: #333;
+        background: none;
         padding: 0 .5rem;
     }
     .product-detail:hover
@@ -89,7 +110,8 @@
         font-weight: bold;
         font-size: 1.3rem;
         transition: .5s;
-        color: #666;
+        color: #333;
+        background: none;
     }
     .product-edit:hover
     {
@@ -100,7 +122,8 @@
         font-weight: bold;
         font-size: 1.3rem;
         transition: .5s;
-        color: #666;
+        color: #333;
+        background: none;
     }
     .product-delete:hover
     {
@@ -111,12 +134,12 @@
     <!-- orderlist section starts -->
     <section style="margin-top: 6rem;">
     <h1 class="heading" style="padding-top: 2rem; margin-bottom: 0; font-size: 2rem;">product list</h1>
-    <div style="background: #F7F9FA; padding-bottom: 3rem;">
+    <div style="background: #F7F9FA; padding: 0 3rem 2rem 3rem;">
         <div style="text-align: right; background-color: #F7F9FA;">
             <a class="product-create" href="/admin/products/create">create</a>
         </div>
         <div class="orderlist">
-            <table style="width: 100%; border: none;  padding: 1rem 3rem 3rem 3rem; background-color: #F7F9FA; font-size: 1.3rem;">
+            <table style="width: 100%; border: none; padding-top: 1rem; background-color: #F7F9FA; font-size: 1.3rem;">
                 <tr style="height: 5rem; background-color: #fff;">
                     <th>id</th>
                     <th>image</th>
@@ -157,7 +180,9 @@
                 @endforeach
             </table>
         </div>
-        {{ $products->links() }}
+        <div style="padding: 4rem 0 2rem;">
+            {{ $products->links() }}
+        </div>
     </div>
 </section>
     <!-- orderlist section ends -->

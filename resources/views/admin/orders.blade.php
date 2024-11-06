@@ -4,6 +4,26 @@
     .orderlist
     {
         overflow-x: auto;
+        scrollbar-color: #333 #fff;
+    }
+    .orderlist:hover
+    {
+        scrollbar-color: #666 #fff;
+    }
+    .orderlist::-webkit-scrollbar {
+        padding: 0 3rem;
+    }
+    .orderlist::-webkit-scrollbar-track {
+        background: #fff;
+    }
+
+    .orderlist::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: .5rem;
+    }
+
+    .orderlist::-webkit-scrollbar-thumb:hover {
+        background: #666;
     }
     tr, th, td
     {
@@ -12,6 +32,7 @@
     }
     td
     {
+        white-space: nowrap;
         text-transform: none;
     }
     .text-yellow
@@ -40,7 +61,8 @@
         font-weight: bold;
         font-size: 1.3rem;
         transition: .5s;
-        color: #666;
+        color: #333;
+        background: none;
         padding: 0 .5rem;
     }
     .order-detail:hover
@@ -52,7 +74,8 @@
         font-weight: bold;
         font-size: 1.3rem;
         transition: .5s;
-        color: #666;
+        color: #333;
+        background: none;
     }
     .order-edit:hover
     {
@@ -63,7 +86,8 @@
         font-weight: bold;
         font-size: 1.3rem;
         transition: .5s;
-        color: #666;
+        color: #333;
+        background: none;
     }
     .order-delete:hover
     {
@@ -74,9 +98,9 @@
     <!-- orderlist section starts -->
     <section style="margin-top: 6rem;">
     <h1 class="heading" style="padding-top: 2rem; margin-bottom: 0; font-size: 2rem;">orders</h1>
-    <div>
+    <div style="background: #F7F9FA; padding: 0 3rem 2rem 3rem;">
         <div class="orderlist">
-            <table style="width: 100%; border: none; padding: 1rem 3rem 3rem 3rem; background-color: #F7F9FA; font-size: 1.3rem;">
+            <table style="width: 100%; border: none; padding-top: 1rem; background-color: #F7F9FA; font-size: 1.3rem;">
                 <tr style="height: 5rem; background-color: #fff;">
                     <th>id</th>
                     <th>name</th>
@@ -115,7 +139,9 @@
                 @endforeach
             </table>
         </div>
-        {{ $orders->links() }}
+        <div style="padding: 4rem 0 2rem;">
+            {{ $orders->links() }}
+        </div>
     </div>
 </section>
     <!-- orderlist section ends -->

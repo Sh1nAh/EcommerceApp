@@ -172,31 +172,33 @@
                     <span class="icon">
                         <ion-icon name="mail"></ion-icon>
                     </span>
-                    <input name="user_email" type="text" required>
-                    <label>Email</label>
-                    <div class="error-message user_email" style="color: red;">
-                        @error('user_email') {{ $message }} @enderror
-                    </div>                    
+                    <input name="user_email" type="text" id="user_email" placeholder=" ">
+                    <label>Email</label>                    
                 </div>
+                @error('user_email')
+                <div class="error-message user_email" style="color: red; margin: -30px 0 30px 0; text-align: left; padding-left: 5px;">
+                    {{ $message }} 
+                </div>     
+                @enderror
+                
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="lock-closed"></ion-icon>
                     </span>
-                    <input name="user_password" type="password" required>
+                    <input name="user_password" type="password" id="user_password" placeholder=" ">
                     <label>Password</label>
-                    <div class="error-message user_password" style="color: red;">
-                        @error('user_password') {{ $message }} @enderror
-                    </div>
                 </div>
+                @error('user_password')
+                <div class="error-message user_password" style="color: red; margin: -30px 0 30px 0; text-align: left; padding-left: 5px;">
+                {{ $message }}
+                </div>
+                @enderror
+                
                 <div class="remember-forgot">
                     <label>
                         <input name="remember" type="checkbox" value="1" {{ old('remember') ? 'checked' : '' }}> Remember me
                     </label>
                     <a href="#">Forgot password?</a>
-
-                    <div class="error-message remember" style="color: red;">
-                        @error('remember') {{ $message }} @enderror
-                    </div>
                 </div>
                 <button id="loginnow" type="submit" class="btn1" aria-label="Login">Login</button>
                 <div class="login-register">
@@ -216,50 +218,65 @@
                     <span class="icon">
                         <ion-icon name="person"></ion-icon>
                     </span>
-                    <input name="name" type="text" value="{{ old('name') }}" required>
+                    <input name="name" type="text" value="{{ old('name') }}" id="name" placeholder=" ">
                     <label>Username</label>
-                    <div class="error-message name" style="color: red;">
-                        @error('name') {{ $message }} @enderror
-                    </div>
                 </div>
+                @error('name')
+                <div class="error-message name" style="color: red; margin: -30px 0 30px 0; text-align: left; padding-left: 5px;">
+                {{ $message }}
+                </div>
+                @enderror
+                
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="mail"></ion-icon>
                     </span>
-                    <input name="email" type="text" value="{{ old('email') }}" required>
+                    <input name="email" type="text" value="{{ old('email') }}"  id="email" placeholder=" ">
                     <label>Email</label>
-                    <div class="error-message email" style="color: red;">
-                        @error('email') {{ $message }} @enderror
-                    </div>
                 </div>
+                @error('email')
+                <div class="error-message email" style="color: red; margin: -30px 0 30px 0; text-align: left; padding-left: 5px;">
+                {{ $message }}
+                </div>
+                @enderror
+                
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="lock-closed"></ion-icon>
                     </span>
-                    <input name="password" type="password" required>
+                    <input name="password" type="password" id="password" placeholder=" ">
                     <label>Password</label>
-                    <div class="error-message password" style="color: red;">
-                        @error('password') {{ $message }} @enderror
-                    </div>
                 </div>
+                @error('password')
+                <div class="error-message password" style="color: red; margin: -30px 0 30px 0; text-align: left; padding-left: 5px;">
+                {{ $message }}
+                </div>
+                @enderror
+                
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="lock-closed"></ion-icon>
                     </span>
-                    <input name="password_confirmation" type="password" required>
+                    <input name="password_confirmation" type="password"  id="password_confirmation" placeholder=" ">
                     <label>Confirm Password</label>
-                    <div class="error-message password_confirmation" style="color: red;">
-                        @error('password_confirmation') {{ $message }} @enderror
-                    </div>
                 </div>
+                @error('password_confirmation')
+                <div class="error-message password_confirmation" style="color: red; margin: -30px 0 30px 0; text-align: left; padding-left: 5px;">
+                {{ $message }}
+                </div>
+                @enderror
+                
                 <div class="remember-forgot">
                     <label>
-                        <input type="checkbox" name="terms" required>I agree to the terms & conditions
+                        <input type="checkbox" name="terms">I agree to the terms & conditions
                     </label>
-                    <div class="error-message terms" style="color: red;">
-                        @error('terms') {{ $message }} @enderror
-                    </div>
                 </div>
+                @error('terms')
+                <div class="error-message terms" style="color: red; margin: -15px 0 15px 0; text-align: left; padding-left: 16px;">
+                {{ $message }}
+                </div>
+                @enderror
+                
                 <button type="submit" class="btn1" id="signupnow">Register</button>
                 <div class="login-register">
                     <p>Already have an account? <a href="#" class="login-link" id="login">Login</a></p>

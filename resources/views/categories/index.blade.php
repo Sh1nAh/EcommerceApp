@@ -1,15 +1,6 @@
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
 <x-layout>
-  @if(session('login_required'))
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Show the login form
-            document.querySelector('.login-form').classList.add('active');
-        });
-    </script>
-  @endif
-
     <!-- products section starts -->
     <section class="products" id="products" style="margin: 6rem 0; min-height: 100vh">
         <h1 class="heading">{{$category->name}}.</h1>
@@ -52,3 +43,6 @@
     <!-- products section ends -->
 
 </x-layout>
+
+<!-- custom script -->
+<script src="{{ asset('js/app.js') }}"></script>

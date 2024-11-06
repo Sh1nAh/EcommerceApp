@@ -18,17 +18,17 @@ return new class extends Migration
             $table->string('image');
             $table->string('name');
             $table->string('slug');
-            $table->string('subtext')->nullable();;
+            $table->string('subtext')->nullable();
             $table->string('price');
-            $table->text('description')->nullable();;
-            $table->string('color')->nullable();
-            $table->string('icon1')->nullable();;
-            $table->string('icon1text')->nullable();;
-            $table->string('icon2')->nullable();;
-            $table->string('icon2text')->nullable();;
-            $table->string('icon3')->nullable();;
-            $table->string('icon3text')->nullable();;
-            $table->integer('discountpercentage');
+            $table->text('description');
+            $table->string('color');
+            $table->string('icon1')->nullable();
+            $table->string('icon1text')->nullable();
+            $table->string('icon2')->nullable();
+            $table->string('icon2text')->nullable();
+            $table->string('icon3')->nullable();
+            $table->string('icon3text')->nullable();
+            $table->integer('discountpercentage')->nullable()->default(0);
             $table->timestamps();
         });
     }

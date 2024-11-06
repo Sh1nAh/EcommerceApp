@@ -1,14 +1,5 @@
 
 <x-layout>
-  @if(session('login_required'))
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Show the login form
-            document.querySelector('.login-form').classList.add('active');
-        });
-    </script>
-  @endif
-
     <!-- products section starts -->
     <section class="products" id="products" style="margin-top: 6rem; min-height: 100vh">
         <h1 class="heading"> {{__('messages.latest')}} <span>{{__('messages.products')}}</span></h1>
@@ -16,7 +7,7 @@
             <div class="search-container">
               <div class="select">
                 <select name="tag" id="">
-                  <option value="">All</option>
+                  <option value="" selected>All</option>
                   @foreach ($tags as $tag)
                     <option value="{{$tag->id}}" {{request('tag') == $tag->id ? 'selected' : ''}}>{{$tag->name}}</option>
                   @endforeach

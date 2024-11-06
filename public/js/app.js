@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     document.querySelector('#signup').onclick = () => {
+        resetErrorMessages(signupForm);
         signupForm.classList.add("active");
         loginForm.classList.remove("active");
         language.classList.remove("active");
@@ -118,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         goingToTop = !goingToTop;
     };
 
-    window.onscroll = hideAllForms;
+    // window.onscroll = hideAllForms;
 });
 
 function closeLoginForm() {
@@ -211,11 +212,6 @@ function validateSignupForm(e) {
         passwordError.style.display = 'block';
         hasError = true;
     }
-    if (passwordInput.value !== confirmPasswordInput.value) {
-        confirmPasswordError.textContent = 'Passwords do not match.';
-        confirmPasswordError.style.display = 'block';
-        hasError = true;
-    }
     if (!checkbox.checked) {
         termsError.textContent = 'You must agree to the terms.';
         termsError.style.display = 'block';
@@ -239,3 +235,38 @@ function resetErrorMessages(form) {
         errorMessage.style.display = 'none';
     });
 }
+
+$(document).ready(function () {
+    var formFields = $('.input-box');
+
+    formFields.each(function () {
+        var field = $(this);
+        var input = field.find('select');
+        var label = field.find('.select-label'); // Correct class selector
+
+        function checkOptions() {
+            console.log('Current value:', input.val()); // Debugging
+            if (input.val()) {
+                label.addClass('active');
+            } else {
+                label.removeClass('active');
+            }
+        }
+
+        // Initial check on page load
+        checkOptions();
+
+        // Handle change event
+        input.change(function () {
+            console.log('Select changed:', input.val()); // Debugging
+            checkOptions();
+        });
+
+        // Focus and blur events
+        input.on("focus", function () {
+            label.addClass('active');
+        }).on("focusout", function () {
+            checkOptions();
+        });
+    });
+});

@@ -11,18 +11,17 @@ class CategoryController extends Controller
 {
     public function index(Category $category)
 {
-    // Start the query on the category's products
     $products = $category->products()->when(request('search'), function ($query) {
         $query->where('name', 'like', '%' . request('search') . '%');
     })->when(request('tag'), function ($query) {
         $query->whereHas('tags', function ($query) {
             $query->where('id', request('tag'));
         });
-    })->paginate(12); // Use paginate here instead of get
+    })->paginate(12);
 
     return view('categories.index', [
         'category' => $category,
-        'products' => $products, // Use the modified products query
+        'products' => $products,
         'tags' => Tag::all(),
     ]);
 }

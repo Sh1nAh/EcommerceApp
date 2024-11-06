@@ -50,7 +50,7 @@ Route::get('/categories/{category:slug}', [CategoryController::class, 'index'])
 
 Route::get('/products', [ProductController::class, 'index']);
 
-Route::get('/products/{product:slug}', [ProductController::class, 'show'])->middleware(MustBeLoginUser::class);
+Route::get('/products/{product:slug}', [ProductController::class, 'show']);
 
 Route::get('/add-to-cart/{product}', [ShoppingcartController::class, 'addToCart'])->name('add-to-cart')->middleware(MustBeLoginUser::class);
 

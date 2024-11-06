@@ -12,16 +12,24 @@
     {
         padding: 0;
         width: 100%;
+        position: relative;
     }
-    .box input 
+    .box label
     {
-    border: none;
-    outline: none;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #333;
-    text-transform: none;
-    padding: 0 35px 0 5px;
+        top: 50%;
+        left: 5px;
+        font-size: 1.2rem;
+        color: #333;
+    }
+    .box input
+    {
+        border: none;
+        outline: none;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #333;
+        text-transform: none;
+        padding: 0 35px 0 5px;
     }
     select
     {
@@ -32,101 +40,87 @@
         color: #333;
         text-transform: none;
         background: #F7F9FA;
-        padding: 1rem 35px 1rem 5px;
         border-radius: .5rem;
-    }
-    #create
-    {
-        margin-top: 3rem;
+        width: 100%;
+        height: 100%;
+        padding: 10px 35px 10px 5px;
+        appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.2 6.5a.5.5 0 0 1 .8 0L8 10.5l4.3-4a.5.5 0 0 1 .8.6l-4.8 4.5a.5.5 0 0 1-.7 0L2.4 7.1a.5.5 0 0 1 0-.6z"/></svg>'); /* Custom dropdown icon */
+        background-repeat: no-repeat;
+        background-position: right 10px center;
     }
 </style>
 <x-admin-layout>
     <!-- createproduct section starts -->
     <section style="margin-top: 6rem;">
     <h1 class="heading" style="padding-top: 2rem; margin-bottom: 0; font-size: 2rem;">create product</h1>
-    <div style="width: 100%; border: none; padding: 1rem 3rem 3rem 3rem; background-color: #F7F9FA; font-size: 1.3rem;">
-        {{-- <form action="/admin/products"  method="POST" enctype="multipart/form-data">
+    <div style="display: flex; justify-content: center; align-items: center; width: 100%; border: none; padding: 1rem 3rem 3rem 3rem; background-color: #F7F9FA; font-size: 1.3rem;">
+        <form class="create-product" style="width: 600px;" action="/admin/products"  method="POST" enctype="multipart/form-data">
             @csrf
-            <label for="">image</label>
-            <input name="image" type="file" class="box">
-            @error('image')
-                <p style="color: red; text-align: left; margin-left: 0.5rem;" class="error-message">{{ $message }}</p>
-            @enderror
-            <label for="">name</label>
-            <input name="name" type="text" class="box" value="{{ old('name') }}">
+            <div class="input-box">
+                <input name="name" type="text" id="name" placeholder=" " value="{{ old('name') }}">
+                <label>Name <span style="color: red;">*</span> </label>
+            </div>
             @error('name')
-                <p style="color: red; text-align: left; margin-left: 0.5rem;" class="error-message">{{ $message }}</p>
-            @enderror
-            <label for="">slug</label>
-            <input name="slug" type="text" class="box" value="{{ old('slug') }}">
-            @error('slug')
-                <p style="color: red; text-align: left; margin-left: 0.5rem;" class="error-message">{{ $message }}</p>
-            @enderror
-            <label for="">price</label>
-            <input name="price" type="number" class="box" value="{{ old('price') }}">
-            @error('price')
-                <p style="color: red; text-align: left; margin-left: 0.5rem;" class="error-message">{{ $message }}</p>
-            @enderror
-            <label for="">discount percentage</label>
-            <input name="discount_percentage" type="number" class="box" value="{{ old('discount_percentage') }}">
-            @error('discount_percentage')
-                <p style="color: red; text-align: left; margin-left: 0.5rem;" class="error-message">{{ $message }}</p>
-            @enderror
-            <label for="">category</label>
-            <select name="category_id" class="box">
-                @foreach ($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                @endforeach
-            </select>
-            <button id="create" type="submit" class="btn">create</button>
-        </form> --}}
-        <form action="/admin/products"  method="POST" enctype="multipart/form-data">
-            @csrf
-            <div class="input-box">
-                <input name="name" type="text" required>
-                <label>Name</label>
-                <div class="error-message name" style="color: red;">
-                    @error('name') {{ $message }} @enderror
+                <div class="error-message name" style="color: red; margin: -30px 0 30px 5px;">
+                {{ $message }}
                 </div>
-            </div>
+            @enderror
             <div class="box">
-                <label style="display: block; margin-bottom: .5rem; padding-left: 5px;">image</label>
-                <input name="image" type="file" required>
-                <div class="error-message image" style="color: red;">
-                    @error('image') {{ $message }} @enderror
-                </div>                    
+                <label style="display: block; margin-bottom: .5rem; padding-left: 5px;">image <span style="color: red;">*</span> </label>
+                <input name="image" type="file">                    
             </div>
-            <div class="input-box">
-                <input name="slug" type="text" required>
-                <label>Slug</label>
-                <div class="error-message slug" style="color: red;">
-                    @error('slug') {{ $message }} @enderror
+            @error('image')
+                <div class="error-message image" style="color: red; margin: .5rem 0 30px 5px;">
+                {{ $message }}
                 </div>
-            </div>
+            @enderror
             <div class="input-box">
-                <input name="subtext" type="text">
-                <label>Subtext</label>
+                <input name="slug" type="text" id="slug" placeholder=" " value="{{ old('slug') }}">
+                <label>Slug <span style="color: red;">*</span> </label>
             </div>
-            <div class="input-box">
-                <input name="price" type="number" required>
-                <label>Price</label>
-                <div class="error-message price" style="color: red;">
-                    @error('price') {{ $message }} @enderror
+            @error('slug')
+                <div class="error-message slug" style="color: red; margin: -30px 0 30px 5px;">
+                {{ $message }}
                 </div>
+            @enderror
+            <div class="input-box">
+                <input id="subtext" name="subtext" type="text" id="subtext" placeholder=" " value="{{ old('subtext') }}">
+                <label for="subtext">Subtext</label>
             </div>
             <div class="input-box">
-                <input name="description" type="text" required>
-                <label>Description</label>
-                <div class="error-message description" style="color: red;">
-                    @error('description') {{ $message }} @enderror
-                </div>
+                <input name="price" type="number" id="price" placeholder=" " value="{{ old('price') }}">
+                <label>Price <span style="color: red;">*</span> </label>
             </div>
+            @error('price')
+                <div class="error-message price" style="color: red; margin: -30px 0 30px 5px;">
+                {{ $message }}
+                </div>
+            @enderror
+            <div class="input-box">
+                <input name="color" type="text" id="color" placeholder=" " value="{{ old('color') }}">
+                <label>Color <span style="color: red;">*</span> </label>
+            </div>
+            @error('color')
+                <div class="error-message color" style="color: red; margin: -30px 0 30px 5px;">
+                {{ $message }}
+                </div>
+            @enderror
+            <div class="input-box">
+                <textarea name="description" id="description" placeholder=" ">{{ old('description') }}</textarea>
+                <label>Description <span style="color: red;">*</span> </label>
+            </div>
+            @error('description')
+                <div class="error-message description" style="color: red; margin: -30px 0 30px 5px;">
+                {{ $message }}
+                </div>
+            @enderror
             <div class="box">
                 <label style="display: block; margin-bottom: .5rem; padding-left: 5px;">icon 1</label>
                 <input name="icon1" type="file">                  
             </div>
             <div class="input-box">
-                <input name="icon1text" type="text">
+                <input name="icon1text" type="text" id="icon1text" placeholder=" " value="{{ old('icon1text') }}">
                 <label>info</label>
             </div>
             <div class="box">
@@ -134,7 +128,7 @@
                 <input name="icon2" type="file">                    
             </div>
             <div class="input-box">
-                <input name="icon2text" type="text">
+                <input name="icon2text" type="text" id="icon2text" placeholder=" " value="{{ old('icon2text') }}">
                 <label>info</label>
             </div>
             <div class="box">
@@ -142,21 +136,32 @@
                 <input name="icon3" type="file">                  
             </div>
             <div class="input-box">
-                <input name="icon3text" type="text">
+                <input name="icon3text" type="text" id="icon3text" placeholder=" " value="{{ old('icon3text') }}">
                 <label>info</label>
             </div>
             <div class="input-box">
-                <input name="discount_percentage" type="number" required>
+                <input name="discountpercentage" type="number" id="discountpercentage" placeholder=" " value="{{ old('discountpercentage') }}">
                 <label>Discount Percentage</label>
             </div>
-            <div class="box">
-                <select name="category_id">
+            
+            <div class="input-box">
+                <select name="category" class="category" id="category">
+                    <option value="" hidden selected disabled>Select</option>
                     @foreach ($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    <option value="{{ $category->id }}" {{ old('category') == $category->id ? 'selected' : '' }}>
+                        {{ $category->name }}
+                    </option>
                     @endforeach
                 </select>
+                <label>Category <span style="color: red;">*</span></label>
             </div>
-            <button id="create" type="submit" class="btn1" aria-label="Create">Create</button>
+            @error('category')
+                <div class="error-message category" style="color: red; margin: -30px 0 30px 5px;">
+                    {{ $message }}
+                </div>
+            @enderror
+            
+            <button type="submit" class="btn1" aria-label="Create">Create</button>
         </form>
     </div>
     <!-- createproduct section starts -->
