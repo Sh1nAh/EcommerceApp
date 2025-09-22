@@ -19,7 +19,7 @@ class ProductFactory extends Factory
     {
         return [
             'category_id' => Category::factory(),
-            'image' => fake()->imageUrl(),
+            'image' => 'https://picsum.photos/seed/' . fake()->word() . '/407/252',
             'name' => fake()->word(),
             'slug' => fake()->slug(),
             'price' => fake()->numberBetween(600, 1000),

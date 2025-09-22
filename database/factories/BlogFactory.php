@@ -20,7 +20,7 @@ class BlogFactory extends Factory
             'date' => fake()->date(),
             'title' => fake()->sentence(6),
             'slug' => fake()->slug(),
-            'image' => fake()->imageUrl(),
+            'image' => 'https://picsum.photos/seed/' . fake()->word() . '/401/188',
             'content' => fake()->paragraph(5),
         ];
     }
